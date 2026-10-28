@@ -1,0 +1,37 @@
+# Project: Personal portfolio website (Chakri)
+
+## Stack
+- Next.js (App Router) with TypeScript
+- Tailwind CSS for all styling (no CSS-in-JS, no component libraries unless I ask)
+- Fonts via next/font (Inter or Geist, one family only)
+- Deployed on Vercel
+
+## Design rules (strict)
+- Minimal and attractive. Dark theme only for now.
+- Colors (define as CSS variables and Tailwind theme tokens, never hardcode hex in components):
+  - background: #0A0A0A
+  - foreground (main text): #F5F5F4
+  - muted (secondary text): #A1A1AA
+  - border: #27272A
+  - accent (yellow): #FACC15
+- Yellow is the ONLY accent color. Use it sparingly (links, hover states, buttons, one highlighted word in a headline). It should cover roughly 5% of any screen.
+- Text on a yellow background must be near-black. Never use yellow text for long paragraphs.
+- No gradients, no heavy shadows, no animated backgrounds, no skill-percentage bars.
+- Use 1px borders (border color token) for separation.
+- One centered content column, max width about 720px, generous whitespace and line spacing.
+- Hierarchy through font size and weight, not extra colors.
+- Hover effects: subtle only (underline, or fade to accent).
+- Mobile first. Everything must look good at 375px wide.
+
+## Code rules
+- Use server components by default. Add "use client" only when state or browser APIs are needed.
+- Keep components small and in /components. Pages go in /app.
+- Keep project data in /data/projects.ts as a typed array for now.
+- Use semantic HTML (header, nav, main, section, footer) and proper heading order.
+- Add alt text for images and accessible labels for links and buttons.
+- Prefer simple, readable code over clever code. Add short comments only where logic is not obvious.
+- Do not install new dependencies without telling me why.
+
+## Working style
+- Make one change at a time. Do not rewrite unrelated files.
+- Briefly explain what you changed and why, so I can learn from it.
