@@ -22,7 +22,7 @@ export function Footer() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/nchakradhar"
             className="transition-colors hover:text-accent"
             target="_blank"
             rel="noopener noreferrer"

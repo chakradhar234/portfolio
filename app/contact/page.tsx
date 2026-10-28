@@ -18,8 +18,8 @@ const links = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/nchakradhar/",
-    text: "linkedin.com/in/nchakradhar",
+    href: "https://www.linkedin.com/in/nchakradhar",
+    text: "www.linkedin.com/in/nchakradhar",
   },
 ] as const;
 
