@@ -10,14 +10,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Chakri",
+  title: {
+    default: "Chakri",
+    template: "%s | Chakri",
+  },
   description: "Personal portfolio",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
+      <body className="flex min-h-full flex-col overflow-x-hidden bg-background font-sans text-foreground">
         <Navbar />
         <main className="mx-auto w-full max-w-[720px] flex-1 px-6 py-16">
           {children}

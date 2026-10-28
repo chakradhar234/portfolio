@@ -2,29 +2,31 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
-  githubUrl?: string;
+  githubUrl: string;
   liveUrl?: string;
 };
 
 export const projects: Project[] = [
   {
-    title: "Taskflow",
-    description: "A minimal task board with drag-and-drop and offline-friendly local storage.",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    githubUrl: "https://github.com/yourusername/taskflow",
-    liveUrl: "https://example.com/taskflow",
+    title: "Personal Portfolio",
+    description:
+      "Minimal dark-themed portfolio with typed content data and server-rendered pages.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    githubUrl: "https://github.com/chakradhar234/portfolio",
   },
   {
-    title: "API Health Dashboard",
-    description: "Monitors HTTP endpoints and surfaces uptime and latency in one view.",
-    tags: ["React", "Node.js", "PostgreSQL"],
-    githubUrl: "https://github.com/yourusername/api-health",
+    title: "TPM UI Modernization",
+    description:
+      "Frontend improvements and bug fixes for enterprise third-party risk management workflows.",
+    tags: ["React", "TypeScript", "ASP.NET"],
+    githubUrl: "https://github.com/chakradhar234",
   },
   {
-    title: "Markdown Notes",
-    description: "Fast note-taking app with live preview and folder-based organization.",
-    tags: ["Next.js", "MDX"],
-    githubUrl: "https://github.com/yourusername/markdown-notes",
-    liveUrl: "https://example.com/notes",
+    title: "Full-Stack Starter",
+    description:
+      "Small reference app combining a React UI, API layer, and relational database schema.",
+    tags: ["React", "C#", "MSSQL"],
+    githubUrl: "https://github.com/chakradhar234",
+    liveUrl: "https://example.com",
   },
 ];

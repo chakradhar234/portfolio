@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NavLink } from "@/components/NavLink";
 
 const navLinks = [
   { href: "/projects", label: "Projects" },
@@ -10,24 +10,16 @@ export function Navbar() {
   return (
     <header className="border-b border-border">
       <nav
-        className="mx-auto flex max-w-[720px] items-center justify-between px-6 py-4"
+        className="mx-auto flex max-w-[720px] items-center justify-between gap-4 px-6 py-4"
         aria-label="Main"
       >
-        <Link
-          href="/"
-          className="text-sm font-medium text-foreground transition-colors hover:text-accent"
-        >
+        <NavLink href="/" className="font-medium">
           Chakri
-        </Link>
-        <ul className="flex items-center gap-6">
+        </NavLink>
+        <ul className="flex shrink-0 items-center gap-4 sm:gap-6">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
-              <Link
-                href={href}
-                className="text-sm text-foreground transition-colors hover:text-accent"
-              >
-                {label}
-              </Link>
+              <NavLink href={href}>{label}</NavLink>
             </li>
           ))}
         </ul>
