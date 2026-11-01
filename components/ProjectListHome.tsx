@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Project } from "@/data/projects";
 
-function projectHref(project: Project) {
+function projectHref(project: Project): string | undefined {
   return project.liveUrl ?? project.githubUrl;
 }
 
@@ -18,10 +18,16 @@ export function ProjectListHome({ projects }: ProjectListHomeProps) {
     <ul className="mt-6 border-t border-border">
       {projects.map((project) => {
         const href = projectHref(project);
-        const rowClassName = "group block py-6";
+        const rowClassName = href
+          ? "group block py-6"
+          : "block py-6";
         const content = (
           <>
-            <h3 className="font-medium text-foreground transition-colors group-hover:text-accent">
+            <h3
+              className={`font-medium text-foreground ${
+                href ? "transition-colors group-hover:text-accent" : ""
+              }`}
+            >
               {project.title}
             </h3>
             <p className="mt-1 text-muted">{project.description}</p>
@@ -40,7 +46,7 @@ export function ProjectListHome({ projects }: ProjectListHomeProps) {
 
         return (
           <li key={project.title} className="border-b border-border">
-            {isExternalHref(href) ? (
+            {href && isExternalHref(href) ? (
               <a
                 href={href}
                 className={rowClassName}
@@ -49,10 +55,12 @@ export function ProjectListHome({ projects }: ProjectListHomeProps) {
               >
                 {content}
               </a>
-            ) : (
+            ) : href ? (
               <Link href={href} className={rowClassName}>
                 {content}
               </Link>
+            ) : (
+              <div className={rowClassName}>{content}</div>
             )}
           </li>
         );

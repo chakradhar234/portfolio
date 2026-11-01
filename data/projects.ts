@@ -2,7 +2,7 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
 };
 
@@ -10,23 +10,27 @@ export const projects: Project[] = [
   {
     title: "Personal Portfolio",
     description:
-      "Minimal dark-themed portfolio with typed content data and server-rendered pages.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+      "A minimal dark-themed portfolio with typed content data, server-rendered pages, and an AI chatbot that answers visitor questions about me using the Gemini API.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Gemini API"],
     githubUrl: "https://github.com/chakradhar234/portfolio",
+    liveUrl: "https://portfolio-wheat-tau-f4cfydtr9p.vercel.app",
   },
   {
-    title: "TPM UI Modernization",
+    title: "SunSeat",
     description:
-      "Frontend improvements and bug fixes for enterprise third-party risk management workflows.",
-    tags: ["React", "TypeScript", "ASP.NET"],
-    githubUrl: "https://github.com/chakradhar234",
+      "A travel-planning PWA that recommends which side of a vehicle to sit on to avoid or catch the sun, based on route and sun position.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "PWA"],
   },
   {
-    title: "Full-Stack Starter",
+    title: "Event Management System",
     description:
-      "Small reference app combining a React UI, API layer, and relational database schema.",
-    tags: ["React", "C#", "MSSQL"],
-    githubUrl: "https://github.com/chakradhar234",
-    liveUrl: "https://example.com",
+      "A platform to create, browse and join events, with email notifications and registration confirmations.",
+    tags: ["JSP", "Servlets", "JDBC", "MySQL"],
+  },
+  {
+    title: "Food Delivery Website",
+    description:
+      "A responsive ordering app with menu browsing, cart, user authentication and order processing.",
+    tags: ["JSP", "JDBC", "MySQL"],
   },
 ];

@@ -24,26 +24,30 @@ export function ProjectListAll({ projects }: ProjectListAllProps) {
               </li>
             ))}
           </ul>
-          <p className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
-            <a
-              href={project.githubUrl}
-              className={linkClassName}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            {project.liveUrl ? (
-              <a
-                href={project.liveUrl}
-                className={linkClassName}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Live
-              </a>
-            ) : null}
-          </p>
+          {project.githubUrl || project.liveUrl ? (
+            <p className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              {project.githubUrl ? (
+                <a
+                  href={project.githubUrl}
+                  className={linkClassName}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              ) : null}
+              {project.liveUrl ? (
+                <a
+                  href={project.liveUrl}
+                  className={linkClassName}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live
+                </a>
+              ) : null}
+            </p>
+          ) : null}
         </li>
       ))}
     </ul>

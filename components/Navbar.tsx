@@ -1,6 +1,7 @@
 import { NavLink } from "@/components/NavLink";
 
 const navLinks = [
+  { href: "/ask", label: "Ask my AI" },
   { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -16,7 +17,7 @@ export function Navbar() {
         <NavLink href="/" className="font-medium">
           Chakri
         </NavLink>
-        <ul className="flex shrink-0 items-center gap-4 sm:gap-6">
+        <ul className="flex max-w-[65%] flex-wrap items-center justify-end gap-x-3 gap-y-2 sm:max-w-none sm:gap-x-6">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <NavLink href={href}>{label}</NavLink>
